@@ -1,8 +1,7 @@
 #!/bin/bash
 
-CURRENT_DATE=$(date)
-
-echo " $CURRENT_DATE "
+# TIMESTAMP=$(date)
+# echo "Time is: $TIMESTAMP"
 
 START_TIME=$(date +%s)
 
@@ -10,4 +9,6 @@ sleep 10
 
 END_TIME=$(date +%s)
 
-echo "Time taken for exicuting script $(($END_TIME-$START_TIME ))"
+TOTAL_TIME=$(($END_TIME-$START_TIME))
+
+echo "Script executed in $TOTAL_TIME seconds"
