@@ -10,3 +10,4 @@ echo " sum is $SUM "
 MOVIES=("Bahubal" "RRR" "Varanasi")
 
 echo " All movies are: ${MOVIES[@]}"
+echo " First movie is ${MOVIES[0]}"
