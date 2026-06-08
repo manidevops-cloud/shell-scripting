@@ -1,0 +1,7 @@
+NUMBER1=10
+NUMBER2=30
+
+SUM=$(($NUMBER1+NUMBER2))
+
+echo " sum is $SUM "
+
