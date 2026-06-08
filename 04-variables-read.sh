@@ -2,7 +2,7 @@
 
 echo " Please enter your user name "
 
-read USER_NAME # read 
+read USER_NAME # here USER_NAME is variable, whatever you enter in terminal stores in this variable
 
 echo " Your user name is $USER_NAME "
 
