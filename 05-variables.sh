@@ -10,4 +10,4 @@ sleep 10
 
 END_TIME=$(date +%s)
 
-Time taken for exicuting script $(($END_TIME-$START_TIME ))
+echo "Time taken for exicuting script $(($END_TIME-$START_TIME ))"
