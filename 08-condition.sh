@@ -10,10 +10,10 @@ NUMBER=$1
 # le - less than or equal
 
 if [ $NUMBER -gt 20 ]; then
-echo " the number is $NUMBER bigger than 20 "
+    echo "Given number $NUMBER is greater to 20"
 elif [ $NUMBER -eq 20 ]; then
-echo " the number is $NUMBER equel to 20 "
-else [ $NUMBER -le 20 ]
-echo " the number is $NUMBER lessthan 20 "
+    echo "Given number $NUMBER is equal to 20"
+else
+    echo "Given number $NUMBER is less than 20"
 fi
 
