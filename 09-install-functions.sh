@@ -18,6 +18,7 @@ VALIDATE(){
 else
     echo " $1 is failed "
     exit 1
+    fi
 }
 
 # checking status of package 
