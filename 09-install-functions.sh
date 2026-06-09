@@ -2,7 +2,7 @@
 
 # checking root user or not 
 
-USERID=$(id -i)
+USERID=$(id -u)
 if [ $USERID -ne 0 ]; then
 echo " Please login as a root and try "
 exit 1
