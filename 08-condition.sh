@@ -9,11 +9,11 @@ NUMBER=$1
 # ge - greater than or equal
 # le - less than or equal
 
-if [ $NUMBER -gt 20 ]
+if [ $NUMBER -gt 20 ]; than
 
 echo " the number is $NUMBER bigger than 20 "
 
-elif [ $NUMBER -eq 20 ]
+elif [ $NUMBER -eq 20 ]; than
 
 echo " the number is $NUMBER equel to 20 "
 
