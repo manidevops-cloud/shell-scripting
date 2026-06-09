@@ -1,47 +1,42 @@
 #!/bin/bash
 
-# checking root user or not 
-
 USERID=$(id -u)
+
+# Check root access or not
 if [ $USERID -ne 0 ]; then
-echo " Please login as a root and try "
-exit 1
+    echo "Please run this script with root access"
+    exit 1
 fi
 
-
-
-# Fuction 
-
+# first arg -> what are you trying to install
+# second arg -> exit code
 VALIDATE(){
-    if [ $2 -eq 0 ]; then
-       echo "  $1 is success "
-else
-    echo " $1 is failed "
-    exit 1
+    if [ $2 -ne 0 ]; then
+        echo "Installing $1 is ... FAILED"
+        exit 1
+    else
+        echo "Installing $1 is ... SUCCESS"
     fi
 }
 
-# checking status of package 
-
-dnf list installed nginx
-
-if [ $? -eq 0 ]; then
-   echo " package is already installed... Skipping "
-else 
-   echo " nginx installing "
-   dnf install nginx -y
-   VALIDATE nginx $?
-fi 
-
-
+# echo "I am continuing..."
 dnf list installed mysql
 
 if [ $? -eq 0 ]; then
-   echo " package is already installed... Skipping "
-else 
-   echo " mysql installing "
-   dnf install mysql -y
-   VALIDATE mysql $?
-fi   
+    echo "MySQL is already installed ... SKIPPING"
+else
+    echo "Installing MySQL"
+    dnf install mysql -y
+    VALIDATE MySQL $?
+fi
+
+dnf list installed nginx
+if [ $? -eq 0 ]; then
+    echo "nginx is already installed ... SKIPPING"
+else
+    echo "Installing nginx"
+    dnf install nginx -y
+    VALIDATE nginx $?
+fi
 
 
