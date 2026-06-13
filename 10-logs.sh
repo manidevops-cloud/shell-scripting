@@ -11,7 +11,7 @@
 # Displays success or failure messages for each package installation.
 
 USERID=$(id -u)
-LOGS_DIR=/var/log/shell-scriptslogs
+LOGS_DIR=/var/log/shell-script
 LOGS_FILE="$LOGS_DIR/$0.log" # /home/ec2-user/shell-logs/10-logs.sh.log
 
 # Check root access or not
